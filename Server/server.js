@@ -9,7 +9,7 @@ import { auth, googleProvider, signInWithPopup, createUserWithEmailAndPassword }
 
 dotenv.config();
 
-const genAI = new GoogleGenerativeAI("AIzaSyBOYveJTYKkGmnnNFNRVtDMZg9QdS0FsQk");
+const genAI = new GoogleGenerativeAI("#");
 
 const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash"
