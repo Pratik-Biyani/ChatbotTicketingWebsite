@@ -20,8 +20,8 @@ app.listen(port,()=>{
 
 app.post("/order", async (req,res)=>{
   const razorpay= new Razorpay({
-    key_id: "rzp_test_rZy8sy8h3lgvoA",
-    key_secret: "UspGlVHcWKyNK4j3PAhfOvJM"
+    key_id: "#",
+    key_secret: "#"
   });
 
   
@@ -46,7 +46,7 @@ app.post('/order/validate', (req, res) => {
   const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
   // Generate the expected signature using HMAC SHA256
-  const sha = crypto.createHmac("sha256"," UspGlVHcWKyNK4j3PAhfOvJM");
+  const sha = crypto.createHmac("sha256"," #");
   sha.update(`${razorpay_order_id}|${razorpay_payment_id}`); // Removed extra space
   
   const digest = sha.digest("hex");
